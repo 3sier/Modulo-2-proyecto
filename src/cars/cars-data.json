@@ -1,0 +1,7 @@
+[
+  { "brand": "Nissan", "model": "200sx", "year": 2000, "traction": "back" },
+  { "brand": "Honda", "model": "civic", "year": 1991, "traction": "front" },
+  { "brand": "BMW", "model": "M3", "year": 1995, "traction": "back" },
+  { "brand": "Mazda", "model": "mx5", "year": 1998, "traction": "back" },
+  { "brand": "Toyota", "model": "Chaser", "year": 1996, "traction": "back" }
+]
