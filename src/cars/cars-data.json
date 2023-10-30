@@ -3,5 +3,20 @@
   { "brand": "Honda", "model": "civic", "year": 1991, "traction": "front" },
   { "brand": "BMW", "model": "M3", "year": 1995, "traction": "back" },
   { "brand": "Mazda", "model": "mx5", "year": 1998, "traction": "back" },
-  { "brand": "Toyota", "model": "Chaser", "year": 1996, "traction": "back" }
+  { "brand": "Toyota", "model": "Chaser", "year": 1996, "traction": "back" },
+  { "brand": "Nissan", "model": "350Z", "year": 2005, "traction": "back" },
+  { "brand": "Mazda", "model": "RX-7", "year": 1992, "traction": "back" },
+  { "brand": "Toyota", "model": "Corolla", "year": 1987, "traction": "back" },
+  { "brand": "Toyota", "model": "Supra", "year": 1997, "traction": "back" },
+  { "brand": "Lexus", "model": "IS300", "year": 2005, "traction": "back" },
+  { "brand": "Honda", "model": "S2000", "year": 2006, "traction": "back" },
+  { "brand": "Nissan", "model": "240sx", "year": 1990, "traction": "back" },
+  { "brand": "Nissan", "model": "R33", "year": 1998, "traction": "back" },
+  { "brand": "Lexus", "model": "IS200", "year": 2000, "traction": "back" },
+  {
+    "brand": "BMW",
+    "model": "E30 3 Series M3",
+    "year": 1990,
+    "traction": "back"
+  }
 ]
