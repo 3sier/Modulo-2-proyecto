@@ -1,22 +1,107 @@
 [
-  { "brand": "Nissan", "model": "200sx", "year": 2000, "traction": "back" },
-  { "brand": "Honda", "model": "civic", "year": 1991, "traction": "front" },
-  { "brand": "BMW", "model": "M3", "year": 1995, "traction": "back" },
-  { "brand": "Mazda", "model": "mx5", "year": 1998, "traction": "back" },
-  { "brand": "Toyota", "model": "Chaser", "year": 1996, "traction": "back" },
-  { "brand": "Nissan", "model": "350Z", "year": 2005, "traction": "back" },
-  { "brand": "Mazda", "model": "RX-7", "year": 1992, "traction": "back" },
-  { "brand": "Toyota", "model": "Corolla", "year": 1987, "traction": "back" },
-  { "brand": "Toyota", "model": "Supra", "year": 1997, "traction": "back" },
-  { "brand": "Lexus", "model": "IS300", "year": 2005, "traction": "back" },
-  { "brand": "Honda", "model": "S2000", "year": 2006, "traction": "back" },
-  { "brand": "Nissan", "model": "240sx", "year": 1990, "traction": "back" },
-  { "brand": "Nissan", "model": "R33", "year": 1998, "traction": "back" },
-  { "brand": "Lexus", "model": "IS200", "year": 2000, "traction": "back" },
+  {
+    "brand": "Nissan",
+    "model": "200sx",
+    "year": 2000,
+    "horsepower": "200",
+    "engine": "2.0 L SR20DET I4 turbo"
+  },
+  {
+    "brand": "Honda",
+    "model": "civic",
+    "year": 1991,
+    "horsepower": "160",
+    "engine": "1.6 L B16A1/B16A2 VTEC DOHC I4"
+  },
+  {
+    "brand": "BMW",
+    "model": "M3",
+    "year": 2006,
+    "horsepower": "343",
+    "engine": "4.0 L P60B40 V8 (M3 GTR)"
+  },
+  {
+    "brand": "Mazda",
+    "model": "mx5",
+    "year": 1998,
+    "horsepower": "90",
+    "engine": "1,995 cc BP DOHC I4 (Mazdaspeed C-Spec)"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Chaser",
+    "year": 1996,
+    "horsepower": "276",
+    "engine": "2,997 cc 2JZ-GE I6"
+  },
+  {
+    "brand": "Nissan",
+    "model": "350Z",
+    "year": 2005,
+    "horsepower": "280",
+    "engine": "3.5 L VQ35HR V6"
+  },
+  {
+    "brand": "Mazda",
+    "model": "RX-7",
+    "year": 1992,
+    "horsepower": "240",
+    "engine": "1308 cc 13B-REW twin-turbo twin-rotor"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Corolla Levin",
+    "year": 1995,
+    "horsepower": "110",
+    "engine": "1.6 L 4A-GEU I4 DOHC"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Supra",
+    "year": 1997,
+    "horsepower": "330",
+    "engine": "2997 cc 2JZ-GTE twin-turbo I6"
+  },
+  {
+    "brand": "Lexus",
+    "model": "IS300",
+    "year": 2005,
+    "horsepower": "213",
+    "engine": "3.0 L 2JZ-GE I6"
+  },
+  {
+    "brand": "Honda",
+    "model": "S2000",
+    "year": 2006,
+    "horsepower": "241",
+    "engine": "4 en línea F20C de 2,0-2,2 L"
+  },
+  {
+    "brand": "Nissan",
+    "model": "240sx",
+    "year": 1990,
+    "horsepower": "158",
+    "engine": "2.4 L KA24E I4 (gasoline)"
+  },
+  {
+    "brand": "Nissan",
+    "model": "Skyline GT-R R33",
+    "year": 1998,
+    "horsepower": "205",
+    "engine": "2.8 L twin-turbocharged RB-X GT2 I6 (400R)"
+  },
+  {
+    "brand": "Lexus",
+    "model": "IS200",
+    "year": 2000,
+    "horsepower": "155",
+    "engine": "3.0 L 2JZ-GE I6"
+  },
   {
     "brand": "BMW",
     "model": "E30 3 Series M3",
     "year": 1990,
-    "traction": "back"
+    "horsepower": "192",
+    "engine": "BMW S14 four-cylinder engine"
   }
 ]

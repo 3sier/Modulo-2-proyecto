@@ -4,12 +4,12 @@ export const CarSchema = new mongoose.Schema({
   brand: String,
   model: String,
   year: Number,
-  traction: String,
+  horsepower: Number,
 });
 
 export interface Car extends mongoose.Document {
   brand: string;
   carModel: string;
   year: number;
-  traction: string;
+  horsepower: number;
 }
