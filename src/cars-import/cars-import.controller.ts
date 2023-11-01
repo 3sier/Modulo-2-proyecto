@@ -1,7 +1,6 @@
 import { Controller, Post, Body } from '@nestjs/common';
 import { CarsImportService } from './cars-import.service';
 import { Car } from './car.model';
-import { CarsService } from '../cars/cars.service';
 
 @Controller('cars-import')
 export class CarsImportController {

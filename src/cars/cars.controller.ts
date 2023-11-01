@@ -1,17 +1,9 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 
-@Controller('cars')
+@Controller('/api/cars')
 export class CarsController {
-  private cars = [];
-
   @Get()
-  findAll(): any[] {
-    return this.cars;
-  }
-
-  @Post()
-  create(@Body() car: any): string {
-    this.cars.push(car);
-    return 'Car created: ${car.model}';
+  findAll(): string {
+    return 'This action returns all cars';
   }
 }

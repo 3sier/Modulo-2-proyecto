@@ -1,12 +1,8 @@
-import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
+import { MongooseModuleOptions } from '@nestjs/mongoose';
 
-@Module({
-  imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017/cars', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }),
-  ],
-})
-export class DatabaseModule {}
+const mongooseConfig: MongooseModuleOptions = {
+  uri: 'your-mongodb-uri',
+  connectionName: 'cars',
+};
+
+export { mongooseConfig };
