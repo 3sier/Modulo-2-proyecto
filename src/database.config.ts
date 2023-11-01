@@ -5,6 +5,6 @@ const mongooseConfig: MongooseModuleOptions = {
   connectionName: 'cars',
 };
 export const DatabaseConfig = {
-  uri: 'mongodb://localhost:27017/your-database-name',
+  uri: 'mongodb://127.0.0.1:27017/cars',
 };
 export { mongooseConfig };
