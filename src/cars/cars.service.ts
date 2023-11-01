@@ -1,23 +1,23 @@
+import { Model } from 'mongoose';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
 import { Car } from '../cars-import/car.model';
 
 @Injectable()
 export class CarsService {
   constructor(@InjectModel('Car') private readonly carModel: Model<Car>) {}
 
-  async create(car: Car): Promise<Car> {
-    const createdCar = new this.carModel(car);
-    return createdCar.save();
+  async createMany(carsData: Car[]): Promise<Car[]> {
+    return this.carModel.create(carsData);
   }
 
   async findAll(): Promise<Car[]> {
-    return this.carModel.find().exec();
+    const cars = await this.carModel.find().exec();
+    console.log('Retrieved cars:', cars);
+    return cars;
   }
-
-  async createMany(cars: Car[]): Promise<Car[]> {
-    const createdCars = await this.carModel.create(cars);
-    return createdCars;
+  catch(error) {
+    console.error('Error fetching cars:', error);
+    throw error;
   }
 }

@@ -1,0 +1,156 @@
+[
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b50"
+    },
+    "brand": "Nissan",
+    "model": "200sx",
+    "year": 2000,
+    "horsepower": "200",
+    "engine": "2.0 L SR20DET I4 turbo",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/2/23/Nissan_200SX_Sportline_Front.JPG"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b52"
+    },
+    "brand": "BMW",
+    "model": "M3",
+    "year": 2006,
+    "horsepower": "343",
+    "engine": "4.0 L P60B40 V8 (M3 GTR)",
+    "img": "https://hips.hearstapps.com/hmg-prod/images/bmw-e46-m3-venta-1599054397.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b53"
+    },
+    "brand": "Mazda",
+    "model": "mx5",
+    "year": 1998,
+    "horsepower": "90",
+    "engine": "1,995 cc BP DOHC I4 (Mazdaspeed C-Spec)",
+    "img": "https://i.pinimg.com/564x/ac/c2/8d/acc28d86be1aac080a1f056aab4ea612.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b54"
+    },
+    "brand": "Toyota",
+    "model": "Chaser",
+    "year": 1996,
+    "horsepower": "276",
+    "engine": "2,997 cc 2JZ-GE I6",
+    "img": "https://www.jdmbuysell.com/wp-content/uploads/2023/09/Toyota-Chaser-Tourer-V-1997-for-sale-via-jdmsportclassics-36222.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b55"
+    },
+    "brand": "Nissan",
+    "model": "350Z",
+    "year": 2005,
+    "horsepower": "280",
+    "engine": "3.5 L VQ35HR V6",
+    "img": "https://img.remediosdigitales.com/a3d497/nissan-350z-2006-1280-01/1366_2000.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b56"
+    },
+    "brand": "Mazda",
+    "model": "RX-7",
+    "year": 1992,
+    "horsepower": "240",
+    "engine": "1308 cc 13B-REW twin-turbo twin-rotor",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Mazda-rx7-3rd-generation01.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b57"
+    },
+    "brand": "Toyota",
+    "model": "Corolla Levin",
+    "year": 1995,
+    "horsepower": "110",
+    "engine": "1.6 L 4A-GEU I4 DOHC",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/b/b9/1983_Toyota_Corolla_Levin.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b58"
+    },
+    "brand": "Toyota",
+    "model": "Supra",
+    "year": 1997,
+    "horsepower": "330",
+    "engine": "2997 cc 2JZ-GTE twin-turbo I6",
+    "img": "https://cdn.motor1.com/images/mgl/PKZQL/s3/1997-toyota-supra-sold-for-176-000-at-auction.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b59"
+    },
+    "brand": "Lexus",
+    "model": "IS300",
+    "year": 2005,
+    "horsepower": "213",
+    "engine": "3.0 L 2JZ-GE I6",
+    "img": "https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2023/05/lexus-is300-3044584.jpg?tf=3840x"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b5a"
+    },
+    "brand": "Honda",
+    "model": "S2000",
+    "year": 2006,
+    "horsepower": "241",
+    "engine": "In line 4 F20C de 2,0-2,2 L",
+    "img": "https://img.remediosdigitales.com/4f0e07/honda-s2000-cr-8/1366_2000.jpeg"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b5b"
+    },
+    "brand": "Nissan",
+    "model": "240sx",
+    "year": 1990,
+    "horsepower": "158",
+    "engine": "2.4 L KA24E I4 (gasoline)",
+    "img": "https://i.pinimg.com/736x/64/f5/c8/64f5c84f84a483df9c2ac0aefb52d4f2--slammed-cars-nissan-sx.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b5c"
+    },
+    "brand": "Nissan",
+    "model": "Skyline GT-R R33",
+    "year": 1998,
+    "horsepower": "205",
+    "engine": "2.8 L twin-turbocharged RB-X GT2 I6 (400R)",
+    "img": "https://www.ultimatespecs.com/cargallery/46/8004/Nissan-R33-Skyline-2.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b5d"
+    },
+    "brand": "Lexus",
+    "model": "IS200",
+    "year": 2000,
+    "horsepower": "155",
+    "engine": "3.0 L 2JZ-GE I6",
+    "img": "https://www.ultimatespecs.com/cargallery/62/1215/Lexus-IS-I-2.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "654269be44915de957e41b5e"
+    },
+    "brand": "BMW",
+    "model": "E30 3 Series M3",
+    "year": 1990,
+    "horsepower": "192",
+    "engine": "BMW S14 four-cylinder engine",
+    "img": "https://www.ultimatespecs.com/cargallery/11/59/BMW-E30-3-Series-c1463-1.jpg"
+  }
+]

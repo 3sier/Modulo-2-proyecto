@@ -1,9 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
+import { CarsService } from './cars.service';
 
-@Controller('/api/cars')
+@Controller('api/cars')
 export class CarsController {
+  constructor(private readonly carsService: CarsService) {}
+
   @Get()
-  findAll(): string {
-    return 'This action returns all cars';
+  async findAll() {
+    return this.carsService.findAll();
   }
 }

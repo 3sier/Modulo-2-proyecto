@@ -6,6 +6,7 @@ export const CarSchema = new mongoose.Schema({
   year: Number,
   horsepower: Number,
   engine: String,
+  img: String,
 });
 
 export interface Car extends mongoose.Document {
@@ -14,4 +15,5 @@ export interface Car extends mongoose.Document {
   year: number;
   horsepower: number;
   engine: string;
+  img: string;
 }
