@@ -24,7 +24,7 @@ function fetchCars() {
 fetchCars();
 
 
-// Redirigir al usuario a index.html
+
 function redirectToIndex() {
   
   window.location.href = "index.html";
