@@ -119,6 +119,10 @@ function fetchCars() {
           carImage.alt = `${car.brand} ${car.model}`;
           carImage.style.maxWidth = '500px';
 
+          const addButton = document.createElement('button');
+          addButton.textContent = 'Add to Favorites';
+          addButton.style.display = 'none'; 
+
           const carInfo = document.createElement('div');
           carInfo.innerHTML = `
             <strong>Brand:</strong> ${car.brand}<br>
@@ -132,45 +136,20 @@ function fetchCars() {
           carImage.addEventListener('click', () => {
             if (carInfo.style.display === 'none') {
               carInfo.style.display = 'block';
+              addButton.style.display = 'block'; 
             } else {
               carInfo.style.display = 'none';
+              addButton.style.display = 'none'; 
             }
           });
 
-          carItem.appendChild(carImage);
-          carItem.appendChild(carInfo);
-          carListContainer.appendChild(carItem);
-        });
-      } else {
-        console.error('Data is not an array:', data);
-      }
-    })
-    .catch((error) => console.error(error));
-}
-/* //Add to favourites
-function fetchCars() {
-  fetch('http://127.0.0.1:3000/api/cars')
-    .then((response) => response.json())
-    .then((data) => {
-      const carListContainer = document.getElementById('carListContainer');
-      if (Array.isArray(data)) {
-        data.forEach((car) => {
-          const carItem = document.createElement('div');
-          carItem.classList.add('car-item');
-
-          const carImage = document.createElement('img');
-          carImage.src = car.img;
-          carImage.alt = `${car.brand} ${car.model}`;
-          carImage.style.maxWidth = '500px';
-
-          const addButton = document.createElement('button');
-          addButton.textContent = 'Add to Favorites';
           addButton.addEventListener('click', () => {
             addToFavorites(car);
           });
 
           carItem.appendChild(carImage);
           carItem.appendChild(addButton);
+          carItem.appendChild(carInfo);
           carListContainer.appendChild(carItem);
         });
       } else {
@@ -185,4 +164,3 @@ function addToFavorites(car) {
   favorites.push(car);
   localStorage.setItem('favorites', JSON.stringify(favorites));
 }
- */
