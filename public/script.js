@@ -118,18 +118,27 @@ function fetchCars() {
           carImage.src = car.img;
           carImage.alt = `${car.brand} ${car.model}`;
           carImage.style.maxWidth = '500px';
+
+          const carInfo = document.createElement('div');
+          carInfo.innerHTML = `
+            <strong>Brand:</strong> ${car.brand}<br>
+            <strong>Model:</strong> ${car.model}<br>
+            <strong>Year:</strong> ${car.year}<br>
+            <strong>Horsepower:</strong> ${car.horsepower}<br>
+            <strong>Engine:</strong> ${car.engine}<br>
+          `;
+          carInfo.style.display = 'none';
+
           carImage.addEventListener('click', () => {
-            carItem.innerHTML = `
-              <strong>Brand:</strong> ${car.brand}<br>
-              <strong>Model:</strong> ${car.model}<br>
-              <strong>Year:</strong> ${car.year}<br>
-              <strong>Horsepower:</strong> ${car.horsepower}<br>
-              <strong>Engine:</strong> ${car.engine}<br>
-              <img src="${car.img}" alt="${car.brand} ${car.model}" style="max-width: 500px;">
-            `;
+            if (carInfo.style.display === 'none') {
+              carInfo.style.display = 'block';
+            } else {
+              carInfo.style.display = 'none';
+            }
           });
 
           carItem.appendChild(carImage);
+          carItem.appendChild(carInfo);
           carListContainer.appendChild(carItem);
         });
       } else {
