@@ -120,8 +120,10 @@ function fetchCars() {
           carImage.style.maxWidth = '500px';
 
           const addButton = document.createElement('button');
-          addButton.textContent = 'Add to Favorites';
-          addButton.style.display = 'none'; 
+          addButton.textContent = '🖤';
+          addButton.style.display = 'none';
+          addButton.style.border = 'none';
+          addButton.style.fontSize = '24px';
 
           const carInfo = document.createElement('div');
           carInfo.innerHTML = `
