@@ -3,10 +3,7 @@
     margin: 10;
 }
 body {
-    background-image: url('https://rare-gallery.com/thumbnail/443099-drift-Assetto-Corsa-Nissan-Nissan-240SX.png');
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #f2f2f2;
     font-family: 'Montserrat', sans-serif;
     font-size:16px;
     text-transform:initial;
@@ -14,9 +11,11 @@ body {
     margin:0 auto;
 	overflow-x:hidden;
 }
-.title {
+#title {
     font-family: 'Montserrat', sans-serif;
     color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
 }
 nav {
 
@@ -72,9 +71,21 @@ footer {
 
     list-style:none
 }
-#h1{
-    text-align: center;
-}
+
 #welcome{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
     text-align: center;
+    text-shadow: 2px 2px 4px white;
 }
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .car-item img {
+    width: 100%;
+    height: auto;
+  }
+  

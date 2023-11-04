@@ -11,39 +11,36 @@
 </head>
 <body>
     <nav>
-       
         <ul class="navbar">
             <li><a href="#landing" class="logo">
                 <img width="45px" height="auto" src="../logo/cars-logo.png"></a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="login">Login</a></li>
+            <li><a href="index.html">All Cars</a></li>
+            <li><a href="../auth/dto/login">Login</a></li>
         </ul>
     </nav>
-    <h1 id="h1">Cars Archive</h1>
+    <header>
+        
+    </header>
+    
+    <h1 id="title">Cars Archive</h1>
     
     <p id="welcome">Welcome to our Cars Archive! Here you can explore a wide collection of cars from various manufacturers and models.</p>
-    
-    <h2 id="featured">Featured Cars</h2>
-    <div class="featured-cars">
-        <ul id="list">
-            <li><a href="#">Toyota Supra</a></li>
-            <li><a href="#">Nissan  Skyline GT-R R33</a></li>
-            <li><a href="#">Nissan 240sx</a></li>
-        </ul>
-    </div>
-    
-    <h2 id="brands"> Brands</h2>
-    <div class="brand-list">
-        <ul id="list">
-            <li><a href="#">Toyota</a></li>
-            <li><a href="#">BMW</a></li>
-            <li><a href="#">Nissan</a></li>
-            <li><a href="#">Mazda</a></li>
-            <li><a href="#">Lexus</a></li>
-        </ul>
-    </div>
-    <footer>Made by <a href="https://github.com/3sier">Asier Valtierra</a> &copy; <script>document.write(new Date().getFullYear());</script></footer>
+    <p id="welcome">You can also filter the cars by brand, model, year, horsepower and engine.</p>
 
+    <div id="carListContainer" class="car-grid"></div>
     
+    <div class='filter' style="text-align: center;">
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand">
+      
+        <label for="year">Year:</label>
+        <input type="text" id="year">
+      
+        <button id="filter-button" onclick="filterCars()">Filter</button>
+    </div>
+    
+    <!-- <footer>Made by <a href="https://github.com/3sier">Asier Valtierra</a> &copy; <script>document.write(new Date().getFullYear());</script></footer> -->
+
+    <script src="script.js"></script>
 </body>
 </html>
