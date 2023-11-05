@@ -17,19 +17,22 @@
             <li><a href="../auth/dto/login">Login</a></li>
         </ul>
     </nav>
-    <form id="login-form">
+    <form id="signup-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email">
         <br>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password">
         <br>
-        <button type="button" id="login-button">Login</button>
+        <button type="button" id="signup-button">Signup</button>
       </form>
-      <footer id="loginFooter">Made by <a href="https://github.com/3sier">Asier Valtierra</a> &copy; <script>document.write(new Date().getFullYear());</script></footer>
+      <footer id="singupFooter">Made by <a href="https://github.com/3sier">Asier Valtierra</a> &copy; <script>document.write(new Date().getFullYear());</script></footer>
       <script src="public/script.js"></script>
       <script>
-        document.getElementById('login-button').addEventListener('click', login);
+        document.getElementById('signup-button').addEventListener('click', signup);
       </script>
       
 </body>

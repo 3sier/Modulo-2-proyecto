@@ -2,6 +2,35 @@
     padding: 10;
     margin: 10;
 }
+
+@media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+    
+    .car-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  
+  @media (min-width: 600px) and (max-width: 1200px) {
+    body {
+      font-size: 16px;
+    }
+    
+    .car-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
+@media (min-width: 1200px) {
+    body {
+      font-size: 18px;
+    }
+    .car-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
 body {
     background-color: #f2f2f2;
     font-family: 'Montserrat', sans-serif;
@@ -17,9 +46,10 @@ body {
     text-align: center;
     text-shadow: 2px 2px 4px #000000;
 }
+
 footer {
     font-family: 'Montserrat', sans-serif;
-    position: fixed;
+    position: relative;
     text-align: center;
     bottom: 0;
     width: 100%;
@@ -29,8 +59,12 @@ footer {
     align-items: center;
   }
 nav {
-
-    padding: 10px;
+    backdrop-filter: blur(5px);
+    color: #FCFAF0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px;
 }
 .img{
     width: 100%;
@@ -74,4 +108,199 @@ nav {
     width: 100%;
     height: auto;
 }
-  
+.car-item {
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px grey;
+    padding: 10px;
+    transition: .3s;
+}
+
+    .car-item:hover {
+        box-shadow: 0 0 0 5px grey;
+    }
+
+#signup-form {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 4px white;
+}
+#signup-button{
+    font-family: monospace;
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+}
+      
+signup-button:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+#signup-form input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    transition: .3s;
+}
+
+#signup-form input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+}
+
+#signup-form input::placeholder {
+    color: #ccc;
+}
+
+#signup-form button {
+    font-family: monospace;
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+}
+
+#signup-form button:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+#signup-form a {
+    text-decoration: none;
+    color: #3b82f6;
+    font-size: 14px;
+    transition: .3s;
+}
+#signup-form {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 4px white;
+}
+#signup-button{
+    font-family: monospace;
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+}
+      
+signup-button:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+#login-form input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    transition: .3s;
+}
+
+#login-form input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+}
+
+#login-form input::placeholder {
+    color: #ccc;
+}
+
+#login-form button {
+    font-family: monospace;
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+}
+
+#login-form button:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+#login-form a {
+    text-decoration: none;
+    color: #3b82f6;
+    font-size: 14px;
+    transition: .3s;
+}
+#login-form {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 4px white;
+}
+#login-button{
+    font-family: monospace;
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+}
+      
+login-button:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+#loginFooter{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    position: fixed;
+    text-align: center;
+    text-shadow: 2px 2px 4px white;
+}
+#singupFooter{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    position: fixed;
+    text-align: center;
+    text-shadow: 2px 2px 4px white;
+}

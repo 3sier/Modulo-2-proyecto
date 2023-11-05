@@ -18,26 +18,23 @@
             <li><a href="../auth/dto/login">Login</a></li>
         </ul>
     </nav>
-    <header>
-        
+    <header>  
     </header>
     
     <h1 id="title">Cars Archive</h1>
     
     <p id="welcome">Welcome to our Cars Archive! Here you can explore a wide collection of cars from various manufacturers and models.</p>
     <p id="welcome">You can filter the cars by brand.</p>
+    <div class='filter' style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
+        <input type="text" id="searchInput" placeholder="Search for a brand...">
+        <button id="searchButton">Search</button>
+    </div>
 
     <div id="carListContainer" class="car-grid"></div>
 
-    <div class='filter' style="text-align: center;">
-        <label for="brand">Brand:</label>
-        <input type="text" id="brand">
-
-      
-        <button id="filter-button" onclick="filterCars()">Filter</button>
-    </div>
     
-    <footer>Made by <a href="https://github.com/3sier">Asier Valtierra</a> &copy; <script>document.write(new Date().getFullYear());</script></footer>
+    
+    <footer>Made by <a href="https://github.com/3sier"> Asier Valtierra</a> &copy; <script>document.write(new Date().getFullYear());</script></footer>
 
     <script src="script.js"></script>
 </body>

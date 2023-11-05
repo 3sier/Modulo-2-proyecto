@@ -10,9 +10,9 @@ class SignupDto {
     readonly email: string;
     
     @IsString()
-    @IsString()
     @MinLength(6)
     readonly password: string;
-    }
+}
 
-    export default SignupDto;
+export default SignupDto;
+    
