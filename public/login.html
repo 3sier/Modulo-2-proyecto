@@ -9,15 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
+    
     <nav>
         <ul class="navbar">
             <li><a href="#landing" class="logo">
                 <img width="45px" height="auto" src="../logo/cars-logo.png"></a></li>
             <li><a href="index.html">All Cars</a></li>
-            <li><a href="../auth/dto/login">Login</a></li>
+            <li><a href="signup.html">Register</a></li>
         </ul>
     </nav>
     <form id="login-form">
+        <h2 style="margin-bottom: 40px;">Login</h2>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email">
         <br>
@@ -27,6 +29,7 @@
         <button type="button" id="login-button">Login</button>
     </form>
     <footer id="loginFooter">Made by <a href="https://github.com/3sier">Asier Valtierra</a> &copy; <script>document.write(new Date().getFullYear());</script></footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="public/script.js"></script>
 </body>
 </html>

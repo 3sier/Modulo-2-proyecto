@@ -18,7 +18,35 @@ export class AuthService {
   async signUp(signUpDto: SignupDto): Promise<{ token: string }> {
     const { name, email, password } = signUpDto;
 
-    console.log('Password:', password);
+    if (name === '') {
+      throw new UnauthorizedException('Please enter your name');
+    }
+    if (email === '') {
+      throw new UnauthorizedException('Please enter your email');
+ 
+    }
+    if (password === '') {
+      throw new UnauthorizedException('Please enter your password');
+
+    }
+    if (password.length < 6) {
+      throw new UnauthorizedException('Password must be at least 6 characters long');
+
+    }
+    if (email.indexOf('@') === -1) {
+      throw new UnauthorizedException('Please enter a valid email');
+
+    }
+    if (email.indexOf('.') === -1) {
+      throw new UnauthorizedException('Please enter a valid email');
+    }
+
+    const isEmailExist = await this.userModel.findOne({ email });
+
+    if (isEmailExist) {
+      throw new UnauthorizedException('Email already exist');
+    }
+
     const hashedPassword = await hash(password, 10);
 
     const user = await this.userModel.create({

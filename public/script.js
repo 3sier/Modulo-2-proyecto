@@ -72,7 +72,16 @@ function addToFavorites(car) {
 
 fetchCars();
 
+document.getElementById('signup-button').addEventListener("click", function(event){
+  event.preventDefault()
+  signup();
+});
+
+
+
 function signup() {
+  console.log('Signup button clicked');
+  
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
@@ -82,8 +91,52 @@ function signup() {
     email: email,
     password: password
   };
+  if (signupData.name === '') {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Insert a correct name!'
+    })
+    return;
+  }
+  if (signupData.email === '') {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Insert a correct email!'
+    })
+    return;
+  }
+  if (signupData.password === '') {
+    alert('Please enter your password');
+    return;
+  }
+  if (signupData.password.length < 6) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Password must be at least 6 characters long!'
+    })
+    return;
+  }
+  if (signupData.email.indexOf('@') === -1) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Please enter a valid email!'
+    })
+    return;
+  }
+  if (signupData.email.indexOf('.') === -1) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Please enter a valid email!'
+    })
+    return;
+  }
 
-  fetch('http://127.0.0.1:3000/api/signup', {
+  fetch('http://127.0.0.1:3000/auth/signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -92,8 +145,22 @@ function signup() {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log('Signup successful:', data);
-      window.location.href = '/login.html';
+      if (data.error) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'There was an error!',
+        })
+        return;
+      }
+      Swal.fire({
+        icon: 'success',
+        title: 'Welcome!',
+        text: 'You have successfully signed up!'
+      }).then(function() {
+        window.location.href = 'login.html';
+      });
+
     })
     .catch((error) => console.error(error));
 }
@@ -101,7 +168,7 @@ function signup() {
 const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
 
-searchButton.addEventListener('click', function() {
+searchButton.addEventListener('click', function(event) {
   const filterValue = searchInput.value.toLowerCase();
 
   fetch('http://127.0.0.1:3000/api/cars')
