@@ -4,10 +4,24 @@ import { CarsModule } from './cars/cars.module';
 import { DatabaseConfig } from './database.config';
 import { AuthModule } from './auth/auth.module';
 import { HealthModule } from './health/health.module';
+import { UserModule } from './user/user.module';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [MongooseModule.forRoot(DatabaseConfig.uri), CarsModule, AuthModule, HealthModule], 
-  controllers: [],
-  providers: [],
+  imports: [
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(DatabaseConfig.uri, {
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+    }),
+    CarsModule,
+    AuthModule,
+    HealthModule,
+    UserModule,
+  ],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

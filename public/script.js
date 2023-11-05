@@ -16,7 +16,10 @@ function fetchCars() {
           const addButton = document.createElement('button');
           addButton.textContent = 'Add to favourite';
           addButton.style.display = 'none';
-          
+          addButton.style.marginTop = '10px';
+          addButton.style.marginBottom = '10px';
+          addButton.style.marginLeft = 'auto';
+          addButton.style.marginRight = 'auto';
 
           const carInfo = document.createElement('div');
           carInfo.innerHTML = `
@@ -27,14 +30,21 @@ function fetchCars() {
             <strong>Engine:</strong> ${car.engine}<br>
           `;
           carInfo.style.display = 'none';
+          carInfo.style.textAlign = 'center';
 
           carImage.addEventListener('click', () => {
             if (carInfo.style.display === 'none') {
               carInfo.style.display = 'block';
               addButton.style.display = 'block';
+              carImage.style.maxWidth = '100%';
+              carImage.style.marginLeft = 'auto';
+              carImage.style.marginRight = 'auto';
             } else {
               carInfo.style.display = 'none';
               addButton.style.display = 'none';
+              carImage.style.maxWidth = '500px';
+              carImage.style.marginLeft = '';
+              carImage.style.marginRight = '';
             }
           });
 
@@ -43,8 +53,8 @@ function fetchCars() {
           });
 
           carItem.appendChild(carImage);
-          carItem.appendChild(addButton);
           carItem.appendChild(carInfo);
+          carItem.appendChild(addButton);
           carListContainer.appendChild(carItem);
         });
       } else {
@@ -82,21 +92,17 @@ function signup() {
   })
     .then((response) => response.json())
     .then((data) => {
-      
       console.log('Signup successful:', data);
       window.location.href = '/login.html';
     })
     .catch((error) => console.error(error));
 }
 
-
 const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
 
-
 searchButton.addEventListener('click', function() {
   const filterValue = searchInput.value.toLowerCase();
-
 
   fetch('http://127.0.0.1:3000/api/cars')
     .then((response) => response.json())
@@ -129,20 +135,31 @@ function displayCarImages(cars) {
       <strong>Engine:</strong> ${car.engine}<br>
     `;
     carInfo.style.display = 'none';
+    carInfo.style.textAlign = 'center';
 
     carImage.addEventListener('click', () => {
       if (carInfo.style.display === 'none') {
         carInfo.style.display = 'block';
         addButton.style.display = 'block';
+        carImage.style.maxWidth = '100%';
+        carImage.style.marginLeft = 'auto';
+        carImage.style.marginRight = 'auto';
       } else {
         carInfo.style.display = 'none';
         addButton.style.display = 'none';
+        carImage.style.maxWidth = '500px';
+        carImage.style.marginLeft = '';
+        carImage.style.marginRight = '';
       }
     });
 
     const addButton = document.createElement('button');
     addButton.textContent = 'Add to favourite';
     addButton.style.display = 'none';
+    addButton.style.marginTop = '10px';
+    addButton.style.marginBottom = '10px';
+    addButton.style.marginLeft = 'auto';
+    addButton.style.marginRight = 'auto';
 
     addButton.addEventListener('click', () => {
       addToFavorites(car);

@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
-
+import * as mongoose from 'mongoose';
+import * as bcrypt from 'bcrypt';
 
 
 @Schema({
