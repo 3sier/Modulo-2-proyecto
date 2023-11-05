@@ -12,10 +12,7 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(DatabaseConfig.uri, {
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-    }),
+    MongooseModule.forRoot(DatabaseConfig.uri),
     CarsModule,
     AuthModule,
     HealthModule,

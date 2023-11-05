@@ -7,7 +7,7 @@ export const UserSchema=new mongoose.Schema({
 
 })
 
-UserSchema.pre('save', async function(next: mongoose.HookNextFunction) {
+UserSchema.pre('save', async function(next: any) {
     try {
       if (!this.isModified('password')) {
         return next();
