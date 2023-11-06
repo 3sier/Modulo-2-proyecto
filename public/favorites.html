@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Fraunces:wght@500&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
@@ -9,26 +9,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-    
+  <title class="title">Favorites</title>
+  <header>
     <nav>
         <ul class="navbar">
             <li><a href="#landing" class="logo">
                 <img width="45px" height="auto" src="../logo/cars-logo.png"></a></li>
             <li><a href="index.html">Archive</a></li>
-            <li><a href="signup.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
         </ul>
-    </nav>
-    <form id="login-form">
-        <h2 style="margin-bottom: 40px;">Login</h2>
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email">
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        <br>
-        <button type="button" id="login-button">Login</button>
-    </form>
-    <footer id="loginFooter">Made by <a href="https://github.com/3sier">Asier Valtierra</a> &copy; <script>document.write(new Date().getFullYear());</script></footer>
+    </nav> 
+    </header>
+<div> <h1 class="favTitle" >Favorite Cars</h1></div>
+ 
+  <div id="carListContainer"></div>
+
+  <div id="carListContainer" class="car-grid" style="margin-left: 20px; margin-right: 20px;"></div>
+  
+  <footer>Made by <a href="https://github.com/3sier"> Asier Valtierra</a> &copy; <script>document.write(new Date().getFullYear());</script></footer>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
 </body>

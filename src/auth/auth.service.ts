@@ -7,6 +7,7 @@ import { compare, hash } from 'bcrypt';
 import  SignupDto  from './dto/signup.dto';
 import { LoginDto } from './dto/login.dto';
 
+
 @Injectable()
 export class AuthService {
   constructor(
@@ -62,21 +63,21 @@ export class AuthService {
 
   async login(loginDto: LoginDto): Promise<{ token: string }> {
     const { email, password } = loginDto;
-
+  
     const user = await this.userModel.findOne({ email });
-
+  
     if (!user) {
       throw new UnauthorizedException('Invalid credentials');
     }
-
+  
     const isPasswordMatched = await compare(password, user.password);
-
+  
     if (!isPasswordMatched) {
       throw new UnauthorizedException('Invalid credentials');
     }
-
+  
     const token = this.jwtService.sign({ id: user._id });
-
+  
     return { token };
   }
-} 
+}

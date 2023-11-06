@@ -326,4 +326,66 @@ login-button:hover {
     text-align: center;
     text-shadow: 2px 2px 4px white;
 }
-
+.favTitle{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+   
+}
+.favTitle{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 4px white;
+}
+#searchInput {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    transition: .3s;
+}
+#searchInput:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+}
+#searchInput::placeholder {
+    color: #ccc;
+}
+#searchButton{
+    font-family: monospace;
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    width: 75px;
+    height: 30px;
+    transition: .3s;
+}
+#searchButton:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #D2E9E9;
+}
+#searchForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    
+}
+#searchForm {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 4px white;
+}
+#searchTitle{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 4px white;
+}
