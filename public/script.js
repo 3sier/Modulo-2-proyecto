@@ -376,4 +376,69 @@ if (window.location.pathname.includes('favorites.html')) {
     localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
   }
   
-  displayFavorites();
+  function displayFavorites() {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const isLoggedIn = checkLoggedIn(); // Add a function to check if the user is logged in
+  
+    const carListContainer = document.getElementById('carListContainer');
+    carListContainer.innerHTML = '';
+  
+    const carGrid = document.createElement('div');
+    carGrid.classList.add('car-grid');
+  
+    favorites.forEach((car) => {
+      const carItem = document.createElement('div');
+      carItem.classList.add('car-item');
+  
+      const carImage = document.createElement('img');
+      carImage.src = car.img;
+      carImage.alt = `${car.brand} ${car.model}`;
+      carImage.style.maxWidth = '500px';
+  
+      const carInfo = document.createElement('div');
+      carInfo.innerHTML = `
+        <strong>Brand:</strong> ${car.brand}<br>
+        <strong>Model:</strong> ${car.model}<br>
+        <strong>Year:</strong> ${car.year}<br>
+        <strong>Horsepower:</strong> ${car.horsepower}<br>
+        <strong>Engine:</strong> ${car.engine}<br>
+      `;
+      carInfo.style.textAlign = 'center';
+      carInfo.style.display = 'none';
+  
+      const removeButton = document.createElement('button');
+      removeButton.textContent = 'Remove from Favorites';
+      removeButton.style.display = isLoggedIn ? 'block' : 'none'; // Hide the remove button if not logged in
+      removeButton.style.margin = '0 auto';
+      removeButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        removeFromFavorites(car);
+        carItem.remove();
+      });
+  
+      carImage.addEventListener('click', () => {
+        if (carInfo.style.display === 'none') {
+          carInfo.style.display = 'block';
+        } else {
+          carInfo.style.display = 'none';
+        }
+      });
+  
+      carItem.appendChild(carImage);
+      carItem.appendChild(carInfo);
+      carItem.appendChild(removeButton);
+      carGrid.appendChild(carItem);
+    });
+  
+    carListContainer.appendChild(carGrid);
+  }
+  
+  function checkLoggedIn() {
+    if (isLoggedIn) {
+      // User is logged in
+      console.log('User is logged in');
+    } else {
+      // User is not logged in
+      console.log('User is not logged in');
+    }
+  }

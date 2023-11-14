@@ -5,7 +5,7 @@ import { AuthService } from './auth.service';
 import { UserModule } from 'src/user/user.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UserSchema } from './schemas/user.schema';
-
+import { LocalStrategy } from './local.strategy';
 @Module({
   imports: [
     UserModule,
@@ -17,7 +17,7 @@ import { UserSchema } from './schemas/user.schema';
     MongooseModule.forFeature([{ name: 'User', schema: UserSchema }]),
   ],
   controllers: [AuthController],
-  providers: [AuthService, JwtService],
+  providers: [AuthService, JwtService, LocalStrategy], 
   exports: [AuthService],
 })
 export class AuthModule {}
